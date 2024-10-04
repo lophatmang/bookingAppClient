@@ -1,0 +1,44 @@
+.search__popup {
+  background-color: #febb02;
+  padding: 10px;
+  border-radius: 10px;
+  h1 {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    * {
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      input {
+        padding: 0;
+        max-width: 50px;
+      }
+      p {
+        color: #6b7280;
+        margin-left: 10px;
+      }
+      input {
+        border-radius: 0;
+      }
+    }
+    button {
+      background-color: #0071c2;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+}

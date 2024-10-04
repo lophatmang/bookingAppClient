@@ -1,0 +1,17 @@
+.searchCity {
+  box-shadow: 0px 2px 16px 0px rgba(26, 26, 26, 0.24);
+  background-color: white;
+  padding: 20px 30px;
+  color: black;
+  margin-top: 5px;
+  border-radius: 8px;
+
+  div {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+    border-top: 1px solid #e7e7e7;
+    cursor: pointer;
+  }
+}

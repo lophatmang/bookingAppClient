@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a {
+      color: #006ce4;
+    }
+  }
+}
