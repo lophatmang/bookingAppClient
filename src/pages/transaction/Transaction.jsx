@@ -25,7 +25,9 @@ function Transaction() {
     } else {
       async function api() {
         const res = await fetch(
-          `http://localhost:5000/hotel/transaction/${user._id}`
+          `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/transaction/${
+            user._id
+          }`
         );
         setTransactions(await res.json());
       }

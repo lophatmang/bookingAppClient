@@ -7,7 +7,9 @@ function ListHotel() {
 
   useEffect(() => {
     async function API() {
-      const res = await fetch("http://localhost:5000/hotel/top-rate");
+      const res = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/top-rate`
+      );
       setObject(await res.json());
     }
     API();

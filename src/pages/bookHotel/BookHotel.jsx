@@ -28,7 +28,9 @@ function BookHotel() {
   useEffect(() => {
     async function api() {
       const res = await fetch(
-        `http://localhost:5000/hotel/room/${params.hotelId}?dateStart=${times[0].startDate}&dateEnd=${times[0].endDate}`
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/room/${
+          params.hotelId
+        }?dateStart=${times[0].startDate}&dateEnd=${times[0].endDate}`
       );
       setListRoom(await res.json());
     }
@@ -68,7 +70,7 @@ function BookHotel() {
     } else if (!transaction.payment) {
       swal("Vui lòng chọn hình thức thanh toán", "", "error");
     } else {
-      fetch("http://localhost:5000/hotel/transaction", {
+      fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/transaction`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(transaction),

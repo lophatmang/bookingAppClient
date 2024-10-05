@@ -15,11 +15,14 @@ function SearchList() {
         adult: searchParams.get("adult"),
         room: searchParams.get("room"),
       };
-      const res = await fetch(`http://localhost:5000/hotel/roomSearch/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(search),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/roomSearch/`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(search),
+        }
+      );
       setRoomList(await res.json());
     }
     api();

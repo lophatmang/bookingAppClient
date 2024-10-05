@@ -59,11 +59,14 @@ function Login() {
         );
       }
     }
-    const req = await fetch(`http://localhost:5000/${e.target.button.value}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
+    const req = await fetch(
+      `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/${e.target.button.value}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
+      }
+    );
     const message = await req.json();
     //đăng ký thât bại
     if (message.regiseterError) {

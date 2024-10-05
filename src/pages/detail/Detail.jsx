@@ -15,7 +15,9 @@ const Detail = () => {
   useEffect(() => {
     async function API() {
       const res = await fetch(
-        `http://localhost:5000/hotel/detail/${params.hotelId}`
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/hotel/detail/${
+          params.hotelId
+        }`
       );
       setHotel(await res.json());
     }
