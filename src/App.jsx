@@ -12,6 +12,7 @@ import City from "./pages/home/City";
 import { loaderCity } from "./api/Api";
 import BookHotel from "./pages/bookHotel/BookHotel";
 import Transaction from "./pages/transaction/Transaction";
+
 library.add(fas);
 
 const router = createBrowserRouter([
